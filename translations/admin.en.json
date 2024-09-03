@@ -1,0 +1,34 @@
+{
+	"itech_world": {
+		"block": {
+			"": "Block",
+			"add": "Add block",
+			"code": "Code",
+			"color": "Color",
+			"keyboard": "Keyboard",
+			"language": "Language",
+			"quote": "Quote",
+			"separator": "Separator",
+			"text": "Text",
+			"title": {
+				"": "Title",
+				"h1": "H1",
+				"h2": "H2",
+				"h3": "H3",
+				"h4": "H4",
+				"h5": "H5",
+				"h6": "H6"
+			},
+			"type": {
+				"": "Type",
+				"standard": "Standard",
+				"info": "Info",
+				"warning": "Warning",
+				"danger": "Danger",
+				"success": "Success"
+			}
+		},
+		"blocks": "Blocks",
+		"wiki": "Wiki"
+	}
+}

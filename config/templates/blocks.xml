@@ -1,0 +1,1373 @@
+<?xml version="1.0" ?>
+<properties xmlns="http://schemas.sulu.io/template/template"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://schemas.sulu.io/template/template http://schemas.sulu.io/template/template-1.0.xsd">
+
+    <block name="wiki_blocks" default-type="text" minOccurs="0" visibleCondition="id">
+        <meta>
+            <title>itech_world.blocks</title>
+        </meta>
+
+        <params>
+            <param name="add_button_text">
+                <meta>
+                    <title>itech_world.block.add</title>
+                </meta>
+            </param>
+        </params>
+
+        <types>
+            <type name="title">
+                <meta>
+                    <title>itech_world.block.title.</title>
+                </meta>
+
+                <properties>
+                    <property name="title_type" type="single_select">
+                        <meta>
+                            <title>itech_world.block.title.</title>
+                        </meta>
+                        <params>
+                            <param name="default_value" value="h1"/>
+
+                            <param name="values" type="collection">
+                                <param name="h1">
+                                    <meta>
+                                        <title>itech_world.block.title.h1</title>
+                                    </meta>
+                                </param>
+
+                                <param name="h2">
+                                    <meta>
+                                        <title>itech_world.block.title.h2</title>
+                                    </meta>
+                                </param>
+
+                                <param name="h3">
+                                    <meta>
+                                        <title>itech_world.block.title.h3</title>
+                                    </meta>
+                                </param>
+
+                                <param name="h4">
+                                    <meta>
+                                        <title>itech_world.block.title.h4</title>
+                                    </meta>
+                                </param>
+
+                                <param name="h5">
+                                    <meta>
+                                        <title>itech_world.block.title.h5</title>
+                                    </meta>
+                                </param>
+
+                                <param name="h6">
+                                    <meta>
+                                        <title>itech_world.block.title.h6</title>
+                                    </meta>
+                                </param>
+                            </param>
+                        </params>
+                    </property>
+
+                    <property name="title" type="text_line">
+                        <meta>
+                            <title>itech_world.block.title.</title>
+                        </meta>
+                    </property>
+                </properties>
+            </type>
+
+            <type name="text">
+                <meta>
+                    <title>itech_world.block.text</title>
+                </meta>
+
+                <properties>
+                    <property name="text" type="text_editor">
+                        <meta>
+                            <title>itech_world.block.text</title>
+                        </meta>
+                    </property>
+                </properties>
+            </type>
+
+            <type name="code">
+                <meta>
+                    <title>itech_world.block.code</title>
+                </meta>
+
+                <properties>
+                    <property name="language" type="single_select">
+                        <meta>
+                            <title>itech_world.block.language</title>
+                        </meta>
+
+                        <params>
+                            <param name="default_value" value="auto"/>
+
+                            <param name="values" type="collection">
+                                <param name="auto">
+                                    <meta>
+                                        <title>(Auto)</title>
+                                    </meta>
+                                </param>
+
+                                <param name="1c">
+                                    <meta>
+                                        <title>1C</title>
+                                    </meta>
+                                </param>
+
+                                <param name="abnf">
+                                    <meta>
+                                        <title>ABNF</title>
+                                    </meta>
+                                </param>
+
+                                <param name="accesslog">
+                                    <meta>
+                                        <title>Accesslog</title>
+                                    </meta>
+                                </param>
+
+                                <param name="actionscript">
+                                    <meta>
+                                        <title>ActionScript</title>
+                                    </meta>
+                                </param>
+
+                                <param name="ada">
+                                    <meta>
+                                        <title>Ada</title>
+                                    </meta>
+                                </param>
+
+                                <param name="angelscript">
+                                    <meta>
+                                        <title>AngelScript</title>
+                                    </meta>
+                                </param>
+
+                                <param name="apache">
+                                    <meta>
+                                        <title>Apache</title>
+                                    </meta>
+                                </param>
+
+                                <param name="applescript">
+                                    <meta>
+                                        <title>AppleScript</title>
+                                    </meta>
+                                </param>
+
+                                <param name="arcade">
+                                    <meta>
+                                        <title>Arcade</title>
+                                    </meta>
+                                </param>
+
+                                <param name="arduino">
+                                    <meta>
+                                        <title>Arduino</title>
+                                    </meta>
+                                </param>
+
+                                <param name="armasm">
+                                    <meta>
+                                        <title>ARM Assembly</title>
+                                    </meta>
+                                </param>
+
+                                <param name="xml">
+                                    <meta>
+                                        <title>XML</title>
+                                    </meta>
+                                </param>
+
+                                <param name="asciidoc">
+                                    <meta>
+                                        <title>AsciiDoc</title>
+                                    </meta>
+                                </param>
+
+                                <param name="aspectj">
+                                    <meta>
+                                        <title>AspectJ</title>
+                                    </meta>
+                                </param>
+
+                                <param name="autohotkey">
+                                    <meta>
+                                        <title>AutoHotkey</title>
+                                    </meta>
+                                </param>
+
+                                <param name="autoit">
+                                    <meta>
+                                        <title>AutoIt</title>
+                                    </meta>
+                                </param>
+
+                                <param name="avrasm">
+                                    <meta>
+                                        <title>AVR Assembly</title>
+                                    </meta>
+                                </param>
+
+                                <param name="awk">
+                                    <meta>
+                                        <title>AWK</title>
+                                    </meta>
+                                </param>
+
+                                <param name="axapta">
+                                    <meta>
+                                        <title>Axapta</title>
+                                    </meta>
+                                </param>
+
+                                <param name="bash">
+                                    <meta>
+                                        <title>Bash</title>
+                                    </meta>
+                                </param>
+
+                                <param name="basic">
+                                    <meta>
+                                        <title>BASIC</title>
+                                    </meta>
+                                </param>
+
+                                <param name="bnf">
+                                    <meta>
+                                        <title>BNF</title>
+                                    </meta>
+                                </param>
+
+                                <param name="brainfuck">
+                                    <meta>
+                                        <title>Brainfuck</title>
+                                    </meta>
+                                </param>
+
+                                <param name="c">
+                                    <meta>
+                                        <title>C</title>
+                                    </meta>
+                                </param>
+
+                                <param name="cal">
+                                    <meta>
+                                        <title>CAL</title>
+                                    </meta>
+                                </param>
+
+                                <param name="capnproto">
+                                    <meta>
+                                        <title>Cap'n Proto</title>
+                                    </meta>
+                                </param>
+
+                                <param name="ceylon">
+                                    <meta>
+                                        <title>Ceylon</title>
+                                    </meta>
+                                </param>
+
+                                <param name="clean">
+                                    <meta>
+                                        <title>Clean</title>
+                                    </meta>
+                                </param>
+
+                                <param name="clojure">
+                                    <meta>
+                                        <title>Clojure</title>
+                                    </meta>
+                                </param>
+
+                                <param name="clojure-repl">
+                                    <meta>
+                                        <title>Clojure REPL</title>
+                                    </meta>
+                                </param>
+
+                                <param name="cmake">
+                                    <meta>
+                                        <title>CMake</title>
+                                    </meta>
+                                </param>
+
+                                <param name="coffeescript">
+                                    <meta>
+                                        <title>CoffeeScript</title>
+                                    </meta>
+                                </param>
+
+                                <param name="coq">
+                                    <meta>
+                                        <title>Coq</title>
+                                    </meta>
+                                </param>
+
+                                <param name="cos">
+                                    <meta>
+                                        <title>COS</title>
+                                    </meta>
+                                </param>
+
+                                <param name="cpp">
+                                    <meta>
+                                        <title>C++</title>
+                                    </meta>
+                                </param>
+
+                                <param name="crmsh">
+                                    <meta>
+                                        <title>CRM Shell</title>
+                                    </meta>
+                                </param>
+
+                                <param name="crystal">
+                                    <meta>
+                                        <title>Crystal</title>
+                                    </meta>
+                                </param>
+
+                                <param name="csharp">
+                                    <meta>
+                                        <title>C#</title>
+                                    </meta>
+                                </param>
+
+                                <param name="csp">
+                                    <meta>
+                                        <title>CSP</title>
+                                    </meta>
+                                </param>
+
+                                <param name="css">
+                                    <meta>
+                                        <title>CSS</title>
+                                    </meta>
+                                </param>
+
+                                <param name="d">
+                                    <meta>
+                                        <title>D</title>
+                                    </meta>
+                                </param>
+
+                                <param name="markdown">
+                                    <meta>
+                                        <title>Markdown</title>
+                                    </meta>
+                                </param>
+
+                                <param name="dart">
+                                    <meta>
+                                        <title>Dart</title>
+                                    </meta>
+                                </param>
+
+                                <param name="delphi">
+                                    <meta>
+                                        <title>Delphi</title>
+                                    </meta>
+                                </param>
+
+                                <param name="diff">
+                                    <meta>
+                                        <title>Diff</title>
+                                    </meta>
+                                </param>
+
+                                <param name="django">
+                                    <meta>
+                                        <title>Django</title>
+                                    </meta>
+                                </param>
+
+                                <param name="dns">
+                                    <meta>
+                                        <title>DNS</title>
+                                    </meta>
+                                </param>
+
+                                <param name="dockerfile">
+                                    <meta>
+                                        <title>Dockerfile</title>
+                                    </meta>
+                                </param>
+
+                                <param name="dos">
+                                    <meta>
+                                        <title>DOS</title>
+                                    </meta>
+                                </param>
+
+                                <param name="dsconfig">
+                                    <meta>
+                                        <title>DSConfig</title>
+                                    </meta>
+                                </param>
+
+                                <param name="dts">
+                                    <meta>
+                                        <title>DTS</title>
+                                    </meta>
+                                </param>
+
+                                <param name="dust">
+                                    <meta>
+                                        <title>Dust</title>
+                                    </meta>
+                                </param>
+
+                                <param name="ebnf">
+                                    <meta>
+                                        <title>EBNF</title>
+                                    </meta>
+                                </param>
+
+                                <param name="elixir">
+                                    <meta>
+                                        <title>Elixir</title>
+                                    </meta>
+                                </param>
+
+                                <param name="elm">
+                                    <meta>
+                                        <title>Elm</title>
+                                    </meta>
+                                </param>
+
+                                <param name="ruby">
+                                    <meta>
+                                        <title>Ruby</title>
+                                    </meta>
+                                </param>
+
+                                <param name="erb">
+                                    <meta>
+                                        <title>ERB</title>
+                                    </meta>
+                                </param>
+
+                                <param name="erlang-repl">
+                                    <meta>
+                                        <title>Erlang REPL</title>
+                                    </meta>
+                                </param>
+
+                                <param name="erlang">
+                                    <meta>
+                                        <title>Erlang</title>
+                                    </meta>
+                                </param>
+
+                                <param name="excel">
+                                    <meta>
+                                        <title>Excel</title>
+                                    </meta>
+                                </param>
+
+                                <param name="fix">
+                                    <meta>
+                                        <title>FIX</title>
+                                    </meta>
+                                </param>
+
+                                <param name="flix">
+                                    <meta>
+                                        <title>Flix</title>
+                                    </meta>
+                                </param>
+
+                                <param name="fortran">
+                                    <meta>
+                                        <title>Fortran</title>
+                                    </meta>
+                                </param>
+
+                                <param name="fsharp">
+                                    <meta>
+                                        <title>F#</title>
+                                    </meta>
+                                </param>
+
+                                <param name="gams">
+                                    <meta>
+                                        <title>GAMS</title>
+                                    </meta>
+                                </param>
+
+                                <param name="gauss">
+                                    <meta>
+                                        <title>Gauss</title>
+                                    </meta>
+                                </param>
+
+                                <param name="gcode">
+                                    <meta>
+                                        <title>G-Code</title>
+                                    </meta>
+                                </param>
+
+                                <param name="gherkin">
+                                    <meta>
+                                        <title>Gherkin</title>
+                                    </meta>
+                                </param>
+
+                                <param name="glsl">
+                                    <meta>
+                                        <title>GLSL</title>
+                                    </meta>
+                                </param>
+
+                                <param name="gml">
+                                    <meta>
+                                        <title>GML</title>
+                                    </meta>
+                                </param>
+
+                                <param name="go">
+                                    <meta>
+                                        <title>Go</title>
+                                    </meta>
+                                </param>
+
+                                <param name="golo">
+                                    <meta>
+                                        <title>Golo</title>
+                                    </meta>
+                                </param>
+
+                                <param name="gradle">
+                                    <meta>
+                                        <title>Gradle</title>
+                                    </meta>
+                                </param>
+
+                                <param name="graphql">
+                                    <meta>
+                                        <title>GraphQL</title>
+                                    </meta>
+                                </param>
+
+                                <param name="groovy">
+                                    <meta>
+                                        <title>Groovy</title>
+                                    </meta>
+                                </param>
+
+                                <param name="haml">
+                                    <meta>
+                                        <title>HAML</title>
+                                    </meta>
+                                </param>
+
+                                <param name="handlebars">
+                                    <meta>
+                                        <title>Handlebars</title>
+                                    </meta>
+                                </param>
+
+                                <param name="haskell">
+                                    <meta>
+                                        <title>Haskell</title>
+                                    </meta>
+                                </param>
+
+                                <param name="haxe">
+                                    <meta>
+                                        <title>Haxe</title>
+                                    </meta>
+                                </param>
+
+                                <param name="hsp">
+                                    <meta>
+                                        <title>HSP</title>
+                                    </meta>
+                                </param>
+
+                                <param name="html">
+                                    <meta>
+                                        <title>HTML</title>
+                                    </meta>
+                                </param>
+
+                                <param name="http">
+                                    <meta>
+                                        <title>HTTP</title>
+                                    </meta>
+                                </param>
+
+                                <param name="hy">
+                                    <meta>
+                                        <title>Hy</title>
+                                    </meta>
+                                </param>
+
+                                <param name="inform7">
+                                    <meta>
+                                        <title>Inform 7</title>
+                                    </meta>
+                                </param>
+
+                                <param name="ini">
+                                    <meta>
+                                        <title>INI</title>
+                                    </meta>
+                                </param>
+
+                                <param name="irpf90">
+                                    <meta>
+                                        <title>IRPF90</title>
+                                    </meta>
+                                </param>
+
+                                <param name="isbl">
+                                    <meta>
+                                        <title>ISBL</title>
+                                    </meta>
+                                </param>
+
+                                <param name="java">
+                                    <meta>
+                                        <title>Java</title>
+                                    </meta>
+                                </param>
+
+                                <param name="javascript">
+                                    <meta>
+                                        <title>JavaScript</title>
+                                    </meta>
+                                </param>
+
+                                <param name="jboss-cli">
+                                    <meta>
+                                        <title>JBoss CLI</title>
+                                    </meta>
+                                </param>
+
+                                <param name="json">
+                                    <meta>
+                                        <title>JSON</title>
+                                    </meta>
+                                </param>
+
+                                <param name="julia">
+                                    <meta>
+                                        <title>Julia</title>
+                                    </meta>
+                                </param>
+
+                                <param name="julia-repl">
+                                    <meta>
+                                        <title>Julia REPL</title>
+                                    </meta>
+                                </param>
+
+                                <param name="kotlin">
+                                    <meta>
+                                        <title>Kotlin</title>
+                                    </meta>
+                                </param>
+
+                                <param name="lasso">
+                                    <meta>
+                                        <title>Lasso</title>
+                                    </meta>
+                                </param>
+
+                                <param name="latex">
+                                    <meta>
+                                        <title>LaTeX</title>
+                                    </meta>
+                                </param>
+
+                                <param name="ldif">
+                                    <meta>
+                                        <title>LDIF</title>
+                                    </meta>
+                                </param>
+
+                                <param name="leaf">
+                                    <meta>
+                                        <title>Leaf</title>
+                                    </meta>
+                                </param>
+
+                                <param name="less">
+                                    <meta>
+                                        <title>LESS</title>
+                                    </meta>
+                                </param>
+
+                                <param name="lisp">
+                                    <meta>
+                                        <title>Lisp</title>
+                                    </meta>
+                                </param>
+
+                                <param name="livecodeserver">
+                                    <meta>
+                                        <title>LiveCode Server</title>
+                                    </meta>
+                                </param>
+
+                                <param name="livescript">
+                                    <meta>
+                                        <title>LiveScript</title>
+                                    </meta>
+                                </param>
+
+                                <param name="llvm">
+                                    <meta>
+                                        <title>LLVM</title>
+                                    </meta>
+                                </param>
+
+                                <param name="lsl">
+                                    <meta>
+                                        <title>LSL</title>
+                                    </meta>
+                                </param>
+
+                                <param name="lua">
+                                    <meta>
+                                        <title>Lua</title>
+                                    </meta>
+                                </param>
+
+                                <param name="makefile">
+                                    <meta>
+                                        <title>Makefile</title>
+                                    </meta>
+                                </param>
+
+                                <param name="mathematica">
+                                    <meta>
+                                        <title>Mathematica</title>
+                                    </meta>
+                                </param>
+
+                                <param name="matlab">
+                                    <meta>
+                                        <title>MATLAB</title>
+                                    </meta>
+                                </param>
+
+                                <param name="maxima">
+                                    <meta>
+                                        <title>Maxima</title>
+                                    </meta>
+                                </param>
+
+                                <param name="mel">
+                                    <meta>
+                                        <title>MEL</title>
+                                    </meta>
+                                </param>
+
+                                <param name="mercury">
+                                    <meta>
+                                        <title>Mercury</title>
+                                    </meta>
+                                </param>
+
+                                <param name="mipsasm">
+                                    <meta>
+                                        <title>MIPS Assembly</title>
+                                    </meta>
+                                </param>
+
+                                <param name="mizar">
+                                    <meta>
+                                        <title>Mizar</title>
+                                    </meta>
+                                </param>
+
+                                <param name="perl">
+                                    <meta>
+                                        <title>Perl</title>
+                                    </meta>
+                                </param>
+
+                                <param name="mojolicious">
+                                    <meta>
+                                        <title>Mojolicious</title>
+                                    </meta>
+                                </param>
+
+                                <param name="monkey">
+                                    <meta>
+                                        <title>Monkey</title>
+                                    </meta>
+                                </param>
+
+                                <param name="moonscript">
+                                    <meta>
+                                        <title>MoonScript</title>
+                                    </meta>
+                                </param>
+
+                                <param name="n1ql">
+                                    <meta>
+                                        <title>N1QL</title>
+                                    </meta>
+                                </param>
+
+                                <param name="nestedtext">
+                                    <meta>
+                                        <title>NestedText</title>
+                                    </meta>
+                                </param>
+
+                                <param name="nginx">
+                                    <meta>
+                                        <title>NGINX</title>
+                                    </meta>
+                                </param>
+
+                                <param name="nim">
+                                    <meta>
+                                        <title>Nim</title>
+                                    </meta>
+                                </param>
+
+                                <param name="nix">
+                                    <meta>
+                                        <title>Nix</title>
+                                    </meta>
+                                </param>
+
+                                <param name="node-repl">
+                                    <meta>
+                                        <title>Node REPL</title>
+                                    </meta>
+                                </param>
+
+                                <param name="nsis">
+                                    <meta>
+                                        <title>NSIS</title>
+                                    </meta>
+                                </param>
+
+                                <param name="objectivec">
+                                    <meta>
+                                        <title>Objective-C</title>
+                                    </meta>
+                                </param>
+
+                                <param name="ocaml">
+                                    <meta>
+                                        <title>OCaml</title>
+                                    </meta>
+                                </param>
+
+                                <param name="openscad">
+                                    <meta>
+                                        <title>OpenSCAD</title>
+                                    </meta>
+                                </param>
+
+                                <param name="oxygene">
+                                    <meta>
+                                        <title>Oxygene</title>
+                                    </meta>
+                                </param>
+
+                                <param name="parser3">
+                                    <meta>
+                                        <title>Parser3</title>
+                                    </meta>
+                                </param>
+
+                                <param name="pf">
+                                    <meta>
+                                        <title>PF</title>
+                                    </meta>
+                                </param>
+
+                                <param name="pgsql">
+                                    <meta>
+                                        <title>PL/pgSQL</title>
+                                    </meta>
+                                </param>
+
+                                <param name="php">
+                                    <meta>
+                                        <title>PHP</title>
+                                    </meta>
+                                </param>
+
+                                <param name="php-template">
+                                    <meta>
+                                        <title>PHP Template</title>
+                                    </meta>
+                                </param>
+
+                                <param name="plaintext">
+                                    <meta>
+                                        <title>Plain Text</title>
+                                    </meta>
+                                </param>
+
+                                <param name="pony">
+                                    <meta>
+                                        <title>Pony</title>
+                                    </meta>
+                                </param>
+
+                                <param name="powershell">
+                                    <meta>
+                                        <title>PowerShell</title>
+                                    </meta>
+                                </param>
+
+                                <param name="processing">
+                                    <meta>
+                                        <title>Processing</title>
+                                    </meta>
+                                </param>
+
+                                <param name="profile">
+                                    <meta>
+                                        <title>Profile</title>
+                                    </meta>
+                                </param>
+
+                                <param name="prolog">
+                                    <meta>
+                                        <title>Prolog</title>
+                                    </meta>
+                                </param>
+
+                                <param name="properties">
+                                    <meta>
+                                        <title>Properties</title>
+                                    </meta>
+                                </param>
+
+                                <param name="protobuf">
+                                    <meta>
+                                        <title>Protocol Buffers</title>
+                                    </meta>
+                                </param>
+
+                                <param name="puppet">
+                                    <meta>
+                                        <title>Puppet</title>
+                                    </meta>
+                                </param>
+
+                                <param name="purebasic">
+                                    <meta>
+                                        <title>PureBasic</title>
+                                    </meta>
+                                </param>
+
+                                <param name="python">
+                                    <meta>
+                                        <title>Python</title>
+                                    </meta>
+                                </param>
+
+                                <param name="python-repl">
+                                    <meta>
+                                        <title>Python REPL</title>
+                                    </meta>
+                                </param>
+
+                                <param name="q">
+                                    <meta>
+                                        <title>Q</title>
+                                    </meta>
+                                </param>
+
+                                <param name="qml">
+                                    <meta>
+                                        <title>QML</title>
+                                    </meta>
+                                </param>
+
+                                <param name="r">
+                                    <meta>
+                                        <title>R</title>
+                                    </meta>
+                                </param>
+
+                                <param name="reasonml">
+                                    <meta>
+                                        <title>ReasonML</title>
+                                    </meta>
+                                </param>
+
+                                <param name="rib">
+                                    <meta>
+                                        <title>RIB</title>
+                                    </meta>
+                                </param>
+
+                                <param name="roboconf">
+                                    <meta>
+                                        <title>Roboconf</title>
+                                    </meta>
+                                </param>
+
+                                <param name="routeros">
+                                    <meta>
+                                        <title>RouterOS</title>
+                                    </meta>
+                                </param>
+
+                                <param name="rsl">
+                                    <meta>
+                                        <title>RSL</title>
+                                    </meta>
+                                </param>
+
+                                <param name="ruleslanguage">
+                                    <meta>
+                                        <title>Oracle Rules Language</title>
+                                    </meta>
+                                </param>
+
+                                <param name="rust">
+                                    <meta>
+                                        <title>Rust</title>
+                                    </meta>
+                                </param>
+
+                                <param name="sas">
+                                    <meta>
+                                        <title>SAS</title>
+                                    </meta>
+                                </param>
+
+                                <param name="scala">
+                                    <meta>
+                                        <title>Scala</title>
+                                    </meta>
+                                </param>
+
+                                <param name="scheme">
+                                    <meta>
+                                        <title>Scheme</title>
+                                    </meta>
+                                </param>
+
+                                <param name="scilab">
+                                    <meta>
+                                        <title>Scilab</title>
+                                    </meta>
+                                </param>
+
+                                <param name="scss">
+                                    <meta>
+                                        <title>SCSS</title>
+                                    </meta>
+                                </param>
+
+                                <param name="shell">
+                                    <meta>
+                                        <title>Shell</title>
+                                    </meta>
+                                </param>
+
+                                <param name="smali">
+                                    <meta>
+                                        <title>Smali</title>
+                                    </meta>
+                                </param>
+
+                                <param name="smalltalk">
+                                    <meta>
+                                        <title>Smalltalk</title>
+                                    </meta>
+                                </param>
+
+                                <param name="sml">
+                                    <meta>
+                                        <title>SML</title>
+                                    </meta>
+                                </param>
+
+                                <param name="sqf">
+                                    <meta>
+                                        <title>SQF</title>
+                                    </meta>
+                                </param>
+
+                                <param name="sql">
+                                    <meta>
+                                        <title>SQL</title>
+                                    </meta>
+                                </param>
+
+                                <param name="stan">
+                                    <meta>
+                                        <title>Stan</title>
+                                    </meta>
+                                </param>
+
+                                <param name="stata">
+                                    <meta>
+                                        <title>Stata</title>
+                                    </meta>
+                                </param>
+
+                                <param name="step21">
+                                    <meta>
+                                        <title>STEP Part 21</title>
+                                    </meta>
+                                </param>
+
+                                <param name="stylus">
+                                    <meta>
+                                        <title>Stylus</title>
+                                    </meta>
+                                </param>
+
+                                <param name="subunit">
+                                    <meta>
+                                        <title>SubUnit</title>
+                                    </meta>
+                                </param>
+
+                                <param name="swift">
+                                    <meta>
+                                        <title>Swift</title>
+                                    </meta>
+                                </param>
+
+                                <param name="taggerscript">
+                                    <meta>
+                                        <title>TaggerScript</title>
+                                    </meta>
+                                </param>
+
+                                <param name="yaml">
+                                    <meta>
+                                        <title>YAML</title>
+                                    </meta>
+                                </param>
+
+                                <param name="tap">
+                                    <meta>
+                                        <title>TAP</title>
+                                    </meta>
+                                </param>
+
+                                <param name="tcl">
+                                    <meta>
+                                        <title>Tcl</title>
+                                    </meta>
+                                </param>
+
+                                <param name="thrift">
+                                    <meta>
+                                        <title>Thrift</title>
+                                    </meta>
+                                </param>
+
+                                <param name="tp">
+                                    <meta>
+                                        <title>TP</title>
+                                    </meta>
+                                </param>
+
+                                <param name="twig">
+                                    <meta>
+                                        <title>Twig</title>
+                                    </meta>
+                                </param>
+
+                                <param name="typescript">
+                                    <meta>
+                                        <title>TypeScript</title>
+                                    </meta>
+                                </param>
+
+                                <param name="vala">
+                                    <meta>
+                                        <title>Vala</title>
+                                    </meta>
+                                </param>
+
+                                <param name="vbnet">
+                                    <meta>
+                                        <title>VB.NET</title>
+                                    </meta>
+                                </param>
+
+                                <param name="vbscript">
+                                    <meta>
+                                        <title>VBScript</title>
+                                    </meta>
+                                </param>
+
+                                <param name="vbscript-html">
+                                    <meta>
+                                        <title>VBScript in HTML</title>
+                                    </meta>
+                                </param>
+
+                                <param name="verilog">
+                                    <meta>
+                                        <title>Verilog</title>
+                                    </meta>
+                                </param>
+
+                                <param name="vhdl">
+                                    <meta>
+                                        <title>VHDL</title>
+                                    </meta>
+                                </param>
+
+                                <param name="vim">
+                                    <meta>
+                                        <title>Vim Script</title>
+                                    </meta>
+                                </param>
+
+                                <param name="wasm">
+                                    <meta>
+                                        <title>WebAssembly</title>
+                                    </meta>
+                                </param>
+
+                                <param name="wren">
+                                    <meta>
+                                        <title>Wren</title>
+                                    </meta>
+                                </param>
+
+                                <param name="x86asm">
+                                    <meta>
+                                        <title>x86 Assembly</title>
+                                    </meta>
+                                </param>
+
+                                <param name="xl">
+                                    <meta>
+                                        <title>XL</title>
+                                    </meta>
+                                </param>
+
+                                <param name="xml">
+                                    <meta>
+                                        <title>XML</title>
+                                    </meta>
+                                </param>
+
+                                <param name="xquery">
+                                    <meta>
+                                        <title>XQuery</title>
+                                    </meta>
+                                </param>
+
+                                <param name="zephir">
+                                    <meta>
+                                        <title>Zephir</title>
+                                    </meta>
+                                </param>
+                            </param>
+                        </params>
+                    </property>
+                    <property name="highlight" type="highlight">
+                        <meta>
+                            <title>itech_world.block.code</title>
+                        </meta>
+                    </property>
+                </properties>
+            </type>
+
+            <type name="keyboard">
+                <meta>
+                    <title>itech_world.block.keyboard</title>
+                </meta>
+
+                <properties>
+                    <property name="keyboard" type="text_line">
+                        <meta>
+                            <title>itech_world.block.keyboard</title>
+                        </meta>
+                    </property>
+                </properties>
+            </type>
+
+            <type name="quote">
+                <meta>
+                    <title>itech_world.block.quote</title>
+                </meta>
+
+                <properties>
+                    <property name="quote_type" type="single_select">
+                        <meta>
+                            <title>itech_world.block.type.</title>
+                        </meta>
+                        <params>
+                            <param name="default_value" value="standard"/>
+
+                            <param name="values" type="collection">
+                                <param name="standard">
+                                    <meta>
+                                        <title>itech_world.block.type.standard</title>
+                                    </meta>
+                                </param>
+
+                                <param name="info">
+                                    <meta>
+                                        <title>itech_world.block.type.info</title>
+                                    </meta>
+                                </param>
+
+                                <param name="warning">
+                                    <meta>
+                                        <title>itech_world.block.type.warning</title>
+                                    </meta>
+                                </param>
+
+                                <param name="danger">
+                                    <meta>
+                                        <title>itech_world.block.type.danger</title>
+                                    </meta>
+                                </param>
+
+                                <param name="success">
+                                    <meta>
+                                        <title>itech_world.block.type.success</title>
+                                    </meta>
+                                </param>
+                            </param>
+                        </params>
+                    </property>
+                    <property name="quote" type="text_line">
+                        <meta>
+                            <title>itech_world.block.quote</title>
+                        </meta>
+                    </property>
+                </properties>
+            </type>
+
+            <type name="separator">
+                <meta>
+                    <title>itech_world.block.separator</title>
+                </meta>
+
+                <properties>
+                    <property name="color" type="color">
+                        <meta>
+                            <title>itech_world.block.color</title>
+                        </meta>
+                    </property>
+                </properties>
+            </type>
+        </types>
+    </block>
+</properties>

@@ -1,0 +1,17 @@
+services:
+    _defaults:
+        autowire: true      # Automatically injects dependencies in your services.
+        autoconfigure: true # Automatically registers your services as commands, event subscribers, etc.
+    # CONTENT TYPES
+    itech_world_sulu_wiki.highlight:
+        class: ItechWorld\SuluWikiBundle\Content\Types\HighLight
+        tags:
+          - { name: "sulu.content.type", alias: "highlight" }
+    # TWIG EXTENSIONS
+    ItechWorld\SuluWikiBundle\Twig\ScriptsExtension:
+        arguments:
+            $highlightStylesheet: '%iw_sulu.highlight_stylesheet%'
+            $highlightScript: '%iw_sulu.highlight_script%'
+            $highlightLanguages: '%iw_sulu.highlight_languages%'
+            $highlightCopyButton: '%iw_sulu.highlight_copy_button%'
+            $quoteIcons: '%iw_sulu.quote_icons%'

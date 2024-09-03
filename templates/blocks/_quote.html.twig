@@ -1,0 +1,26 @@
+{% if block.quote_type == 'standard' %}
+	<blockquote class="quote standard">
+		<div class="quote-icon">{{quote_icons.standard}}</div>
+		<p>{{ block.quote and block.quote != "" ? block.quote : 'This is a standard quote.' }}</p>
+	</blockquote>
+{% elseif block.quote_type == 'info' %}
+	<blockquote class="quote info">
+		<div class="quote-icon">{{quote_icons.info}}</div>
+		<p>{{ block.quote and block.quote != "" ? block.quote : 'This is an informational quote.' }}</p>
+	</blockquote>
+{% elseif block.quote_type == 'warning' %}
+	<blockquote class="quote warning">
+		<div class="quote-icon">{{quote_icons.warning}}</div>
+		<p>{{ block.quote and block.quote != "" ? block.quote : 'This is a warning quote.' }}</p>
+	</blockquote>
+{% elseif block.quote_type == 'danger' %}
+	<blockquote class="quote danger">
+		<div class="quote-icon">{{quote_icons.danger}}</div>
+		<p>{{ block.quote and block.quote != "" ? block.quote : 'This is a danger quote.' }}</p>
+	</blockquote>
+{% elseif block.quote_type == 'success' %}
+	<blockquote class="quote success">
+		<div class="quote-icon">{{quote_icons.success}}</div>
+		<p>{{ block.quote and block.quote != "" ? block.quote : 'This is a success quote.' }}</p>
+	</blockquote>
+{% endif %}

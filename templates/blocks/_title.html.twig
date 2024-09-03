@@ -1,0 +1,13 @@
+{% if block.title_type == 'h1' %}
+	<h1>{{ block.title }}</h1>
+{% elseif block.title_type == 'h2' %}
+	<h2>{{ block.title }}</h2>
+{% elseif block.title_type == 'h3' %}
+	<h3>{{ block.title }}</h3>
+{% elseif block.title_type == 'h4' %}
+	<h4>{{ block.title }}</h4>
+{% elseif block.title_type == 'h5' %}
+	<h5>{{ block.title }}</h5>
+{% elseif block.title_type == 'h6' %}
+	<h6>{{ block.title }}</h6>
+{% endif %}

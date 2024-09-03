@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="{{ highlight_stylesheet }}">
+{% if highlight_copy_button %}
+	<link
+		rel="stylesheet"
+		href="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.css"
+	/>
+{% endif %}
+<script src="{{ highlight_script }}"></script>
+{% for language in highlight_languages %}
+	<script src="{{ language }}"></script>
+{% endfor %}
+{% if highlight_copy_button %}
+	<script src="https://unpkg.com/highlightjs-copy/dist/highlightjs-copy.min.js"></script>
+{% endif %}
+<script>
+	hljs.highlightAll();
+	{% if highlight_copy_button %}
+	hljs.addPlugin(
+		new CopyButtonPlugin({
+			callback: (text, el) => console.log("Copied to clipboard", text),
+		})
+	);
+	hljs.addPlugin( {
+		'after:highlightElement': ({el, result}) => {
+			// move the language from the result into the dataset
+			el.dataset.language = result.language }
+	});
+	{% endif %}
+</script>
+<link rel="stylesheet" href="{{ asset('bundles/itechworldsuluwiki/styles/app.css') }}">

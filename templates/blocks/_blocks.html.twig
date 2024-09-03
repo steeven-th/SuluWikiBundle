@@ -1,0 +1,15 @@
+{% for block in content.wiki_blocks %}
+	{% if block.type == 'code' %}
+		{% include '@ItechWorldSuluWiki/blocks/_code.html.twig' %}
+	{% elseif block.type == 'quote' %}
+		{% include '@ItechWorldSuluWiki/blocks/_quote.html.twig' %}
+	{% elseif block.type == 'title' %}
+		{% include '@ItechWorldSuluWiki/blocks/_title.html.twig' %}
+	{% elseif block.type == 'text' %}
+		{% include '@ItechWorldSuluWiki/blocks/_text.html.twig' %}
+	{% elseif block.type == 'keyboard' %}
+		{% include '@ItechWorldSuluWiki/blocks/_keyboard.html.twig' %}
+	{% elseif block.type == 'separator' %}
+		{% include '@ItechWorldSuluWiki/blocks/_separator.html.twig' %}
+	{% endif %}
+{% endfor %}
