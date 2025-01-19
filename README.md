@@ -1,7 +1,5 @@
 <div align="center">
-    <a href="https://sudcms.com/" target="_blank">
-        <img width="150" src="./doc/images/logo.png" alt="SudCMS logo">
-    </a>
+    <img width="150" src="./doc/images/logo.png" alt="Itech World logo">
 </div>
 
 <h1 align="center">Wiki Bundle for <a href="https://sulu.io" target="_blank">Sulu</a></h1>
@@ -11,10 +9,10 @@
     <a href="LICENSE" target="_blank">
         <img src="https://img.shields.io/badge/license-MIT-green" alt="GitHub license">
     </a>
-    <a href="https://gitea.otidea.com/Steeven/SudcmsConfigBundle/releases" target="_blank">
+    <a href="https://github.com/steeven-th/SuluWikiBundle/releases" target="_blank">
         <img src="https://img.shields.io/badge/release-v1.0.0-blue" alt="GitHub tag (latest SemVer)">
     </a>
-    <a href="https://github.com/Otidea/sulu-event-bundle/releases" target="_blank">
+    <a href="https://sulu.io/" target="_blank">
         <img src="https://img.shields.io/badge/sulu_compatibility-%3E=2.6-cyan" alt="Sulu compatibility">
     </a>
 </p>
