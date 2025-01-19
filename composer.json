@@ -3,7 +3,7 @@
   "description": "SuluWikiBundle extends the Sulu CMS to offer wiki and documentation management features similar to WikiJS",
   "type": "sulu-bundle",
   "license": "MIT",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "keywords": [
     "sulu",
     "symfony",
