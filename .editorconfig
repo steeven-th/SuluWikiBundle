@@ -11,11 +11,15 @@ trim_trailing_whitespace = true
 insert_final_newline = true
 
 # Match PHP files (PSR-2)
-[{*.php,*.xml,*.yml,*.yaml,*.md}]
+[{*.php,*.xml,*.md}]
 indent_size = 4
 
+# Match YAML files
+[{*.yml,*.yaml,*.json}]
+indent_size = 2
+
 # Match HTML files
-[{*.html,*.twig,*.js,*.json}]
+[{*.html,*.twig,*.js}]
 indent_style = tab
 
 # Match Twig files

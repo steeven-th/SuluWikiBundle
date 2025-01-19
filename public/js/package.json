@@ -2,9 +2,9 @@
   "name": "sulu-itech-world-sulu-wiki-bundle",
   "description": "Sulu Wiki Bundle allows to manage wiki in Sulu CMS",
   "license": "MIT",
+	"version": "1.0.0",
   "peerDependencies": {
     "react": "^16.2.0 || ^17.0.0 || ^18.0.0",
-    "sulu-admin-bundle": "*",
-    "@highlightjs/cdn-assets": "^11.2.0"
+    "sulu-admin-bundle": "*"
   }
 }

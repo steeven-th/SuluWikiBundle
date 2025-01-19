@@ -1,17 +1,15 @@
 import React, { Component } from 'react';
-import '@highlightjs/cdn-assets/styles/default.min.css';
 
 class HighLight extends Component {
     constructor(props) {
         super(props);
-        // Initialiser l'état avec la valeur initiale provenant des props
         this.state = {
-            text: props.value || ''  // Utilise la valeur des props ou une chaîne vide par défaut
+            text: props.value || ''
         };
     }
 
     static defaultProps = {
-        indentLength: 4
+        indentLength: 1
     };
 
     handleChange = (e) => {
@@ -48,7 +46,6 @@ class HighLight extends Component {
         }
     };
 
-    // Utilisation de componentDidUpdate pour détecter les changements dans les props
     componentDidUpdate(prevProps) {
         if (prevProps.value !== this.props.value) {
             this.setState({ text: this.props.value });
@@ -61,7 +58,7 @@ class HighLight extends Component {
                 value={this.state.text}
                 onChange={this.handleChange}
                 onKeyDown={this.handleKeyDown}
-                style={{ width: '100%', height: '200px', fontFamily: 'monospace', whiteSpace: 'pre' }}
+                style={{ width: '100%', maxWidth: '100%', minWidth: '100%', height: '300px', minHeight: '200px', fontFamily: 'monospace', whiteSpace: 'pre' }}
             />
         );
     }

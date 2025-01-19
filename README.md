@@ -1,7 +1,40 @@
-<h1 style="text-align: center;">Sulu Wiki Bundle</h1>
+<div align="center">
+    <a href="https://sudcms.com/" target="_blank">
+        <img width="150" src="./doc/images/logo.png" alt="SudCMS logo">
+    </a>
+</div>
+
+<h1 align="center">Wiki Bundle for <a href="https://sulu.io" target="_blank">Sulu</a></h1>
+
+<h3 align="center">Developed by <a href="https://github.com/steeven-th" target="_blank">Steeven THOMAS</a></h3>
+<p align="center">
+    <a href="LICENSE" target="_blank">
+        <img src="https://img.shields.io/badge/license-MIT-green" alt="GitHub license">
+    </a>
+    <a href="https://gitea.otidea.com/Steeven/SudcmsConfigBundle/releases" target="_blank">
+        <img src="https://img.shields.io/badge/release-v1.0.0-blue" alt="GitHub tag (latest SemVer)">
+    </a>
+    <a href="https://github.com/Otidea/sulu-event-bundle/releases" target="_blank">
+        <img src="https://img.shields.io/badge/sulu_compatibility-%3E=2.6-cyan" alt="Sulu compatibility">
+    </a>
+</p>
 SuluWikiBundle extends the Sulu CMS to offer wiki and documentation management features similar to WikiJS
 
-## Installation
+## 📂 Requirements
+
+* PHP ^8.2
+* Sulu ^2.6.*
+
+## 🛠️ Features
+
+* Wiki and Documentation Management
+* Syntax Highlighting for Code Blocks
+* Keyboard Shortcuts
+* Copy Button
+* Quotes
+* Separators
+
+## 🚀 Installation
 
 ### Step 1: Download using composer
 In a Symfony application run this command to install and integrate Cookie Consent bundle in your application:
@@ -18,7 +51,35 @@ return [
 ];
 ```
 
-### Step 3: Configure to your needs
+### Step 3: Edit admin package
+Edit the `assets/admin/package.json` to add the bundle to the list of bundles:
+```json
+{
+    "dependencies": {
+        "sulu-itech-world-sulu-wiki-bundle": "file:../../vendor/itech-world/sulu-wiki-bundle/public/js"
+    }
+}
+```
+
+Edit the `assets/admin/app.js` to add the bundle in imports:
+```js
+import 'sulu-itech-world-sulu-wiki-bundle';
+```
+
+In the `assets/admin/` folder, run the following command:
+```bash
+npm install
+npm run build
+```
+
+or
+
+```bash
+yarn install
+yarn build
+```
+
+### Step 4: Configure to your needs
 Configure your bundle in the `config/packages/itech_world_sulu_wiki.yaml` file:
 ```yaml
 itech_world_sulu_wiki:
@@ -43,18 +104,25 @@ By default :
 
 For the quote icons, you can use any emoji you want or add external icons, from [FontAwesome](https://fontawesome.com/) for example.
 
-### Step 4: Add blocks in your xml page template
+### Step 5: Add blocks in your xml page template
 Add the following code in your xml page template:
 ```xml
 <xi:include href="../../../vendor/itech-world/sulu-wiki-bundle/config/templates/blocks.xml" xpointer="xmlns(sulu=http://schemas.sulu.io/template/template)
                               xpointer(/sulu:properties/sulu:block[@name='wiki_blocks'])"/>
 ```
 
-## Usage
+You can create and use your own block template, like the [blocks.xml](./config/templates/blocks.xml) file.
+
+## 📖 Usage
 ### Twig implementation
-Load the scripts and stylesheet in your base twig template:
+Load the HIGHLIGHT scripts and stylesheet in your base twig template in the `head` section:
 ```twig
 {{ it_sulu_wiki_scripts() }}
+```
+
+If you want to use the default front css, load it in your base twig template in the `head` section:
+```twig
+{{ it_sulu_wiki_default_css() }}
 ```
 
 Include the blocks in your twig front template:
@@ -62,27 +130,27 @@ Include the blocks in your twig front template:
 {% include '@ItechWorldSuluWiki/blocks/_blocks.html.twig' %}
 ```
 
-## Customization
+## 🎨 Customization
 ### Styling
-SuluWikiBundle comes with a default styling. A css file is available in public/styles/app.css.
+SuluWikiBundle comes with a default styling. If you don't want to use the default css, you can create your own css file.
+You can find the default css file in the bundle [default_css.html.twig](./templates/default_css.html.twig) template.
 
-To install these assets run:
-```bash
-bin/console assets:install
-```
-
-## Bug and Idea
+## 🐛 Bug and Idea
 
 See the [open issues](https://github.com/steeven-th/SuluWikiBundle/issues) for a list of proposed
 features (and known issues).
 
-## Support me
+## 💰 Support me
 
 You can buy me a coffee to support me **this plugin is 100% free**.
 
 [Buy me a coffee](https://www.buymeacoffee.com/steeven.th)
 
-## Contact
+## 👨‍💻 Contact
 
 <a href="https://steeven-th.dev"><img src="https://avatars.githubusercontent.com/u/82022828?s=96&v=4" width="48"></a>
 <a href="https://x.com/ThomasSteeven2"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/2d/Twitter_X.png/640px-Twitter_X.png" width="48"></a>
+
+## 📘&nbsp; License
+
+This bundle is under the [MIT License](LICENSE).

@@ -27,12 +27,20 @@ class ScriptsExtension extends AbstractExtension implements GlobalsInterface
             new TwigFunction('it_sulu_wiki_scripts', [$this, 'wikiScripts'], [
                 'is_safe' => ['html'],
             ]),
+            new TwigFunction('it_sulu_wiki_default_css', [$this, 'defaultCss'], [
+                'is_safe' => ['html'],
+            ]),
         ];
     }
 
     public function wikiScripts(): ?string
     {
         return $this->environment->render('@ItechWorldSuluWiki/scripts.html.twig');
+    }
+
+    public function defaultCss(): ?string
+    {
+        return $this->environment->render('@ItechWorldSuluWiki/default_css.html.twig');
     }
 
     public function getGlobals(): array
