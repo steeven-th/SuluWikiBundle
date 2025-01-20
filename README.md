@@ -32,6 +32,9 @@ SuluWikiBundle extends the Sulu CMS to offer wiki and documentation management f
 * Quotes
 * Separators
 
+## 📸 Screenshots
+You can see [screenshots](./doc/screenshots.md) of admin and frontend.
+
 ## 🚀 Installation
 
 ### Step 1: Download using composer
